@@ -111,6 +111,65 @@ Feature selection using Recursive Feature Elimination (Telco Customer Churn)
 - Reducing model complexity while maintaining accuracy
 - Practical demonstration of the curse of dimensionality
 
+#### [Feature_Eng_SFS.ipynb](Feature_Eng_SFS.ipynb) & [mlXtend_Feature_Eng_SFS.ipynb](mlXtend_Feature_Eng_SFS.ipynb)
+Sequential Feature Selection for optimal feature subsets
+- **Sequential Forward Selection (SFS)** - Adding features iteratively
+- **Sequential Backward Selection** - Removing features iteratively
+- Using mlXtend library for advanced feature selection
+- Comparing model performance across different feature combinations
+- Practical application on Telco Customer Churn dataset
+- Greedy search algorithms for feature optimization
+
+#### [FE_PCA.ipynb](FE_PCA.ipynb)
+Principal Component Analysis for dimensionality reduction
+- **PCA (Principal Component Analysis)** - Linear dimensionality reduction
+- Variance explanation and component selection
+- Reducing feature space while retaining information
+- Data standardization before PCA
+- Visualization of principal components
+- Model performance comparison: full features vs PCA-reduced features
+- Handling high-dimensional datasets efficiently
+
+#### [FE_LDA.ipynb](FE_LDA.ipynb)
+Linear Discriminant Analysis for supervised dimensionality reduction
+- **LDA (Linear Discriminant Analysis)** - Supervised feature extraction
+- Maximizing class separability
+- Comparison with PCA (unsupervised vs supervised)
+- Feature projection for classification tasks
+- Multi-class discrimination optimization
+- Enhanced classification performance through LDA
+
+#### [FE_KPCA_&_QDA.ipynb](FE_KPCA_&_QDA.ipynb)
+Advanced dimensionality reduction and classification techniques
+- **Kernel PCA (KPCA)** - Non-linear dimensionality reduction
+- RBF, polynomial, and sigmoid kernels
+- **Quadratic Discriminant Analysis (QDA)** - Non-linear classifier
+- Handling non-linearly separable data
+- Kernel trick for complex feature spaces
+- Performance comparison: LDA vs QDA
+
+#### [chi_square.ipynb](chi_square.ipynb)
+Statistical feature selection using Chi-Square test
+- **Chi-Square Test** - Statistical feature selection for categorical data
+- SelectKBest for automated feature ranking
+- P-value analysis for feature importance
+- Statistical significance testing
+- Feature selection for classification tasks
+- Identifying most relevant features statistically
+
+### ⚙️ Hyperparameter Optimization
+
+#### [HPO_BreastCancer.ipynb](HPO_BreastCancer.ipynb)
+Comprehensive hyperparameter tuning techniques (Breast Cancer dataset)
+- **Grid Search CV** - Exhaustive hyperparameter search
+- **Random Search CV** - Randomized parameter sampling
+- **Bayesian Optimization** - Smart hyperparameter tuning
+- Cross-validation strategies
+- Random Forest hyperparameter tuning
+- Finding optimal model configurations
+- Performance metrics and model comparison
+- Avoiding overfitting through proper validation
+
 ### 📈 Time Series Forecasting & Analysis
 
 #### [Time Series & Analysis/ARIMA.ipynb](Time%20Series%20&%20Analysis/ARIMA.ipynb)
@@ -155,6 +214,63 @@ Advanced Prophet modeling with holiday effects
 - **Project3 - Demand Forecasting for E-commerce** - Business demand prediction
 - **UNI & Multi Variate Analysis** - Multi-variable forecasting with Prophet
 
+## 🧠 Deep Learning
+
+### Convolutional Neural Networks (CNNs)
+
+#### [Deep Learning/CNN_Image_Classification.ipynb](Deep%20Learning/CNN_Image_Classification.ipynb)
+Building CNNs from scratch for image classification (Fashion MNIST)
+- **CNN Architecture** - Conv2D, MaxPooling2D, Dropout layers
+- Fashion MNIST dataset (10 clothing categories)
+- Image preprocessing and normalization
+- Model compilation with categorical crossentropy
+- Training deep learning models with TensorFlow/Keras
+- Evaluation metrics and accuracy visualization
+- Understanding convolutional filters and feature maps
+
+#### [Deep Learning/Image_Augmentation.ipynb](Deep%20Learning/Image_Augmentation.ipynb)
+Data augmentation techniques to improve model generalization
+- **Image Augmentation** - Rotation, flipping, zooming, shifting
+- Preventing overfitting through data diversity
+- Real-time data augmentation during training
+- Keras ImageDataGenerator utilities
+- Visualizing augmented images
+- Expanding limited datasets artificially
+
+#### [Deep Learning/Pre_trained_Models.ipynb](Deep%20Learning/Pre_trained_Models.ipynb)
+Transfer learning with pre-trained models
+- **Pre-trained Models** - VGG16, ResNet, MobileNet
+- ImageNet weights for transfer learning
+- Feature extraction from pre-trained networks
+- Fine-tuning strategies
+- Quick deployment with minimal training
+- Leveraging models trained on millions of images
+
+#### [Deep Learning/X_ray_Image_Classification_with_PreTrained_Models.ipynb](Deep%20Learning/X_ray_Image_Classification_with_PreTrained_Models.ipynb)
+Medical image classification using transfer learning (Chest X-ray dataset)
+- **Medical Image Classification** - Pneumonia detection from X-rays
+- Transfer learning with VGG16/ResNet for medical imaging
+- Handling imbalanced medical datasets
+- Data augmentation for medical images
+- Model evaluation with precision, recall, F1-score
+- Real-world healthcare application
+- Binary classification: Normal vs Pneumonia
+- Deployment-ready medical AI model
+
+### Recurrent Neural Networks (RNNs)
+
+#### [Deep Learning/TATA_stock_prediction_LSTM.ipynb](Deep%20Learning/TATA_stock_prediction_LSTM.ipynb)
+Stock price prediction using LSTM networks
+- **LSTM (Long Short-Term Memory)** - Sequential data modeling
+- Time series prediction with deep learning
+- Stock market price forecasting (TATA Global)
+- Sequence creation with sliding windows
+- MinMax scaling for neural networks
+- Multi-layer LSTM architecture
+- Dropout for regularization
+- Predicting future stock prices
+- Visualization of predictions vs actual prices
+
 ## 🎯 Learning Objectives
 
 This repository demonstrates practical mastery of:
@@ -175,8 +291,15 @@ This repository demonstrates practical mastery of:
 
 ### Advanced Techniques
 - **Ensemble Methods**: Bagging, Random Forests, variance reduction
-- **Feature Engineering**: RFE, dimensionality reduction, feature selection
+- **Feature Engineering**: RFE, SFS, PCA, LDA, KPCA, Chi-Square
+- **Hyperparameter Optimization**: Grid Search, Random Search, Bayesian Optimization
 - **Model Evaluation**: Cross-validation, multiple metrics, comparative analysis
+
+### Deep Learning
+- **CNNs**: Image classification, convolutional architectures, transfer learning
+- **RNNs/LSTMs**: Sequential data, time series prediction, stock forecasting
+- **Transfer Learning**: Pre-trained models, fine-tuning, medical imaging
+- **Data Augmentation**: Image preprocessing, generalization techniques
 
 ### Best Practices
 - Data preprocessing and feature scaling
@@ -206,15 +329,21 @@ This repository demonstrates practical mastery of:
 - `sklearn.metrics` - Model evaluation
 - `statsmodels.tsa` - ARIMA, decomposition, stationarity tests
 - `fbprophet` - Prophet forecasting models
+- `tensorflow` & `keras` - Deep learning frameworks
+- `mlxtend` - Machine learning extensions for advanced feature selection
 
 ## 📊 Datasets Used
 
 - **50 Startups** - Multi-variable linear regression
 - **Boston Housing** - Regularization and feature selection
-- **Telco Customer Churn** - Classification and RFE
+- **Telco Customer Churn** - Classification, RFE, and feature engineering
 - **Mall Customers** - Clustering and segmentation
+- **Breast Cancer Wisconsin** - Hyperparameter optimization
 - **Air Passengers** - Classic time series dataset for ARIMA
 - **Custom Time Series** - Prophet forecasting demonstrations
+- **Fashion MNIST** - CNN image classification (60,000 images)
+- **Chest X-ray Images** - Medical image classification (Pneumonia detection)
+- **TATA Stock Data** - LSTM stock price prediction
 - **Synthetic Data** - make_classification, make_regression
 
 ## 🚀 Getting Started
@@ -245,7 +374,11 @@ Each notebook is self-contained with:
 - 📊 Stock market prediction
 - 🛍️ E-commerce demand planning
 - 📅 Seasonal pattern detection
+- 🏥 Medical diagnosis (Pneumonia from X-rays)
+- 👕 Fashion item classification
+- 💹 Stock price forecasting with deep learning
+- 🔬 Cancer detection and classification
 
 ---
 
-*A practical, code-first approach to understanding machine learning fundamentals through real implementations.*
+*A comprehensive, hands-on journey through machine learning - from classical algorithms to cutting-edge deep learning, covering regression, classification, clustering, time series analysis, and neural networks.*
